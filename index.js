@@ -1,4 +1,5 @@
-require("dotenv").config();
+if (process.env.NODE_ENV !== "production") require("dotenv").config();
+// require("dotenv").config();
 
 const axios = require("axios");
 const instance = axios.create({
