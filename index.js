@@ -35,15 +35,15 @@ client.on("ready", async () => {
 });
 
 client.on("message", async msg => {
-  if (msg.channel.id === process.env.DISCORD_CHANNEL_ID) {
-    if (msg.content === "!twice") {
-      msg.channel.send(await getTenorGif("twice"));
-    } else if (msg.content === "!mina") {
-      msg.channel.send(await getTenorGif("mina"));
-    } else if (msg.content === "!bts") {
-      msg.channel.send(await getTenorGif("nct"));
-    } else if (msg.content === "!nct") {
-      msg.channel.send(await getTenorGif("bts"));
-    }
+  // if (msg.channel.id === process.env.DISCORD_CHANNEL_ID) {
+  if (msg.content === "!twice") {
+    msg.channel.send(await getTenorGif("twice"));
+  } else if (msg.content === "!mina") {
+    msg.channel.send(await getTenorGif("mina"));
+  } else if (msg.content === "!bts") {
+    msg.channel.send(await getTenorGif("nct"));
+  } else if (msg.content === "!nct") {
+    msg.channel.send(await getTenorGif("bts"));
   }
+  // }
 });
